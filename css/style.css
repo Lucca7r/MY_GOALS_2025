@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../img/backgroud.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2.5em;
+  color: #ffffff;
+}
+
+.goals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.goal-card {
+    word-wrap: break-word; /* Permite que o texto quebre a linha */
+    word-break: break-word; /* Permite que o texto quebre a linha */
+}
+
+.goal-card {
+  width: 285px;
+  height: 160px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.2em;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.goal-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+.goal-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 10px;
+  padding-top: 0;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.goal-checkbox {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.goal-card.completed {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: border-circulate 1s infinite linear;
+}
+
+@keyframes border-circulate {
+  0% {
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent transparent transparent #155724;
+  }
+  25% {
+    border-color: transparent transparent #155724 transparent;
+  }
+  50% {
+    border-color: transparent #155724 transparent transparent;
+  }
+  75% {
+    border-color: #155724 transparent transparent transparent;
+  }
+  100% {
+    border-color: transparent transparent transparent #155724;
+  }
+}
